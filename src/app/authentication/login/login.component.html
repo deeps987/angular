@@ -1,0 +1,21 @@
+<section class="container" [ngClass]="{'form-shadow': registrationForm.touched}">
+    <header>Login Form</header>
+  
+    <form class="form" (ngSubmit)="OnFormSubmitted()" #registrationForm="ngForm">
+      <div class="column">
+        <div class="input-box">
+          <input type="text" placeholder="Username" 
+               name="username" ngModel required #fname="ngModel" />
+        </div>
+        
+        <div class="input-box">
+          <input type="text" placeholder="Password" name="password" 
+            ngModel required #lname="ngModel"/>
+        </div>
+      </div>    
+  
+      <input type="submit" value="Submit" class="submit-btn" [disabled]="!registrationForm.valid"> 
+    </form>
+  </section>
+  
+  

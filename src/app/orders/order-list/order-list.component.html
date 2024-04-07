@@ -1,0 +1,94 @@
+<!-- <p>order-list works!</p> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Table Example</title>
+  Bootstrap CSS 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Your Orders</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Order_Date</th>
+          <th>Order_id</th>
+          <th>Product_id</th>
+          <th>Quantity</th>
+          <th>Status</th>
+          <th>Click Here</th>
+        </tr>
+      </thead>
+      <ng-container *ngFor="let item of myOrders; let i = index">
+        <ng-template>
+          <tr>
+            <td>{{ i + 1 }}</td>
+            <td>{{ item.Order_Date }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.age }}</td>
+            <td>{{ item.country }}</td>
+          </tr>
+        </ng-template>
+      </ng-container>
+      
+    </table>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>  -->
+
+  
+<div class="mb-3">
+  <p-button type="button" icon="pi pi-chevron-left" (click)="prev()" [disabled]="isFirstPage()" styleClass="p-button-text"></p-button>
+  <p-button type="button" icon="pi pi-refresh" (click)="reset()" styleClass="p-button-text"></p-button>
+  <p-button type="button" icon="pi pi-chevron-right" (click)="next()" [disabled]="isLastPage()" styleClass="p-button-text"></p-button>
+</div> 
+<p-table
+  [value]="myOrders"
+  [paginator]="true"
+  [rows]="5"
+  [first]="first"
+  [showCurrentPageReport]="true"
+  [style]="{ 'min-width': '50rem' }"
+  currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+  (onPage)="pageChange($event)"
+>
+  <ng-template pTemplate="header">
+      <tr>
+          <th style="width:14%">Product_id</th>
+          <th style="width:14%">Category</th>
+          <th style="width:14%">Description</th>
+          <th style="width:14%">Price</th>
+          <th style="width:14%">Gender</th>
+          <th style="width:14%">Size</th>
+          <th style="width:14%">Buy Now</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-searchedProduct let-i="rowIndex">
+    <ng-container *ngFor="let searchedProduct of eventData">
+      <tr>
+        <td>{{ searchedProduct.Product_id }}</td>
+        <td>{{ searchedProduct.Category }}</td>
+        <td>{{ searchedProduct.Description }}</td>
+        <td>{{ searchedProduct.Price }}</td>
+        <td>{{ searchedProduct.Gender }}</td>
+        <td>{{ searchedProduct.Size }}</td>
+        <td>
+          <p-button label="Buy Now" [text]="true" [raised]="true" (click)="buyNow(searchedProduct)"></p-button>
+        </td>
+      </tr>
+    </ng-container>
+  </ng-template>
+  
+  <ng-template pTemplate="paginatorLeft">
+      <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+  </ng-template>
+  <ng-template pTemplate="paginatorRight">
+      <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+  </ng-template> 
+</p-table>

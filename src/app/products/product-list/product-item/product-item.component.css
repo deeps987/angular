@@ -1,0 +1,63 @@
+/* Style for the product container */
+/* .total{
+    background-color: antiquewhite;
+} */
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 160px;
+    margin-top: 53px;
+    margin-bottom: 190px;
+    /* background-color: antiquewhite; */
+  }
+  
+  /* Style for the image column */
+  .image-column {
+    flex: 0 0 200px; /* Set fixed width for image column */
+    margin-right: 20px; /* Add spacing between image and details */
+  }
+  
+  /* Style for the product image */
+  .product-image {
+    width: 150%;
+    height: 140%;
+  }
+  
+  /* Style for the details column */
+  .details-column {
+    flex: 1; /* Take remaining space */
+  }
+  
+  /* Style for the product details */
+  .product-details {
+    padding: 20px;
+    margin-left: 125px;
+  }
+  
+  .product-details h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .product-details p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  /* Style for the product actions (buttons) */
+  .product-actions {
+    /* display: flex;
+    justify-content: space-between;
+    margin-top: 20px; */
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-left: 125px;
+    border-radius: 3px;
+  }
+  
+  /* Style for the buttons */
+  /* .p-button {
+    min-width: 120px;
+  } */
+  

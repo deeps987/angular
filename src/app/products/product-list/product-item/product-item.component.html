@@ -1,0 +1,57 @@
+<!-- <div class="p-grid"> -->
+    <!-- Image Column -->
+    <!-- <div class="p-col-12 p-md-6">
+      <img src=".\assets\ethnic-dress.jpg" alt="Product Image" class="product-image" />
+    </div> -->
+    
+    <!-- Product Details Column -->
+    <!-- <div class="p-col-12 p-md-6">
+      <div class="product-details"> -->
+        <!-- <h2>{{ newProduct.Category }}</h2> -->
+        <!-- <p>{{ newProduct.Description }}</p>
+        <p>{{ newProduct.Gender }}</p>
+        <p>Price: {{ newProduct.Price }}</p>
+        <p>Product ID: {{ newProduct.Product_id }}</p>
+        <p>Available Size: {{ newProduct.Size }}</p>
+      </div> -->
+      
+      <!-- Product Actions (Buttons) -->
+      <!-- <div class="product-actions">
+        <button pButton type="button" label="Buy Now" class="p-button-success" (click)="buyNow()"></button>
+        <button pButton type="button" label="Add to Cart" class="p-button-secondary" (click)="addToCart()"></button>
+      </div>
+    </div>
+  </div> -->
+
+
+<div class = "total">
+  <div class="product-container">
+    <!-- Image Column -->
+    <div class="image-column">
+      <img src=".\assets\ethnic-dress.jpg" alt="Product Image" class="product-image" />
+    </div>
+    
+    <!-- Product Details Column -->
+    <div class="details-column">
+      <div class="product-details">
+        <h2>{{ newProduct.Category }}</h2>
+        <p>{{ newProduct.Description }}</p>
+        <p>{{ newProduct.Gender }}</p>
+        <p>Price: {{ newProduct.Price }}</p>
+        <p>Product ID: {{ newProduct.Product_id }}</p>
+      </div>
+      
+      <!-- Product Actions (Buttons) -->
+      <div class="product-actions">
+        <p-button label="Buy Now" [text]="true" [raised]="true"></p-button>
+        <!-- <p-button label="Add to Cart" [text]="true" [raised]="true"></p-button> -->
+        <!-- <input type="submit" value="Buy Now" class="submit-btn" > -->
+        <!-- <input type="submit" value="Add to Cart" class="submit-btn" > -->
+        <!-- <button type="button" label="Buy Now" class="p-button-success" (click)="buyNow()"></button> -->
+        <!-- <button pButton type="button" label="Add to Cart" class="p-button-secondary" (click)="addToCart()"></button> -->
+      </div>
+    </div>
+  </div>
+</div>
+  
+  

@@ -1,0 +1,14 @@
+<section class="top-picks">
+    <h2>TOP Picks</h2>
+    <!-- Add content for TOP Picks section here -->
+  </section>
+  
+<div class="card-container">
+  <div class="p-card" *ngFor="let product of products" (click)="productDetail(product, '.\assets\ethnic-dress.jpg')">
+    <img src= ".\assets\ethnic-dress.jpg"  class="product-image" />
+    <div class="product-details">
+      <p>{{ product.Description }}</p>
+      <p>Price: {{ product.Price }}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<!-- <p>account works!</p> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation</title>
+<style>
+    /* Container styles */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+    
+    /* Button styles */
+    .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+  
+    /* Button hover effect */
+    .button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <button class="button" (click)="showProfile()">My Profile</button>
+  <button class="button" (click)="showMyOrders()">My Orders</button>
+  <button class="button" (click)="showPage()">Orders</button>
+  <button class="button" (click)="showPage()">My Products</button>
+  <button class="button" (click)="showPage()">Add Products</button>
+</div>
+
+<!-- <script>
+  function showPage(pageName) {
+    // Replace this function with your logic to navigate to different pages
+    alert(`Navigating to ${pageName}`);
+  }
+</script> -->
+</body>
+</html>

@@ -1,0 +1,24 @@
+<p-menubar [model]="items">
+    <ng-template pTemplate="start">
+      <img src="" alt="SHOPPIE" height="40" width="70" class="mr-2" />
+    </ng-template>
+   
+
+    <ng-template pTemplate="end">
+        <input type="text" pInputText placeholder="Search" class="w-full" (keydown.enter)="GetProduct($event)"/>
+        <p-button label="Home" [text]="true"></p-button>
+        
+        <p-button label="Categories" [text]="true"></p-button>
+        <p-button label="MyAccount" [text]="true" (click)="myAccount()"></p-button>
+        <!-- <p-button label="Cart" [text]="true"></p-button> -->
+        <p-button label="Login" [text]="true" [raised]="true" routerLink="auth/login"  *ngIf="loginPage"></p-button>
+        <p-button *ngIf="signupPage" label="Register" [text]="true" [raised]="true" routerLink="auth/signup"></p-button>
+        <p-button label="Logout" [text]="true" [raised]="true" routerLink="auth/logout"  *ngIf="isLogin()"></p-button>
+    </ng-template>
+    <!-- <ng-template pTemplate="end">
+      <input type="text" pInputText placeholder="Search" class="w-full" />
+
+      <button class="login-btn" routerLink="/login" *ngIf="!loginpage">Login</button>
+      <button class="signup-btn" routerLink="signup">Signup</button>
+    </ng-template> -->
+  </p-menubar>
